@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <EditText
+        android:id="@+id/fullname"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginEnd="40dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/textbox"
+        android:hint="Full Name"
+        android:inputType="text"
+        android:paddingStart="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <EditText
+        android:id="@+id/email2"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/textbox"
+        android:hint="Email"
+        android:inputType="textEmailAddress"
+        android:paddingStart="10dp"
+        app:layout_constraintEnd_toEndOf="@+id/fullname"
+        app:layout_constraintStart_toStartOf="@+id/fullname"
+        app:layout_constraintTop_toBottomOf="@+id/fullname" />
+
+    <EditText
+        android:id="@+id/address"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:hint="Address"
+        android:inputType="text"
+        android:padding="10dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/textbox"
+        app:layout_constraintStart_toStartOf="@+id/email2"
+        app:layout_constraintEnd_toEndOf="@+id/email2"
+        app:layout_constraintTop_toBottomOf="@+id/email2"/>
+
+    <EditText
+        android:id="@+id/phoneNo"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/textbox"
+        android:inputType="number"
+        android:hint="Phone Number"
+        android:paddingStart="10dp"
+        app:layout_constraintEnd_toEndOf="@+id/address"
+        app:layout_constraintStart_toStartOf="@+id/address"
+        app:layout_constraintTop_toBottomOf="@+id/address"/>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/password"
+        android:layout_width="0dp"
+        android:layout_height="52dp"
+        android:layout_marginTop="20dp"
+        app:passwordToggleEnabled="true"
+        app:layout_constraintStart_toStartOf="@+id/phoneNo"
+        app:layout_constraintTop_toBottomOf="@+id/phoneNo"
+        app:layout_constraintEnd_toEndOf="@+id/phoneNo">
+
+        <EditText
+            android:id="@+id/pass2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/textbox"
+            android:hint="Password"
+            android:inputType="textPassword"
+            android:paddingStart="10dp"
+            app:layout_constraintEnd_toEndOf="@+id/phoneNo"
+            app:layout_constraintStart_toStartOf="@+id/phoneNo"
+            app:layout_constraintTop_toBottomOf="@+id/phoneNo" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+<!--    <EditText-->
+<!--        android:id="@+id/confirmpass"-->
+<!--        android:layout_width="0dp"-->
+<!--        android:layout_height="48dp"-->
+<!--        android:layout_marginTop="20dp"-->
+<!--        android:background="@drawable/textbox"-->
+<!--        android:hint="Confrim Password"-->
+<!--        android:inputType="textPassword"-->
+<!--        android:paddingEnd="10dp"-->
+
+<!--        app:layout_constraintEnd_toEndOf="@+id/pass2"-->
+<!--        app:layout_constraintStart_toStartOf="@+id/pass2"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/pass2"/>-->
+
+    <Button
+        android:id="@+id/signUp_Btn"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="40dp"
+        android:background="@drawable/button_style"
+        android:text="Sign Up"
+        android:textAllCaps="false"
+        android:onClick="signUpBtn"
+        app:layout_constraintEnd_toEndOf="@+id/password"
+        app:layout_constraintStart_toStartOf="@+id/password"
+        app:layout_constraintTop_toBottomOf="@+id/password" />
+
+    <ProgressBar
+        android:id="@+id/progBar"
+        style="?android:attr/progressBarStyleLarge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="200dp"
+        android:visibility="invisible"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

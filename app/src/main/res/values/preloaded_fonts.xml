@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="preloaded_fonts" translatable="false">
+        <item>@font/alice</item>
+        <item>@font/baloo</item>
+        <item>@font/baloo_thambi</item>
+        <item>@font/butcherman</item>
+        <item>@font/fontdiner_swanky</item>
+        <item>@font/happy_monkey</item>
+        <item>@font/kavoon</item>
+        <item>@font/leckerli_one</item>
+        <item>@font/spicy_rice</item>
+        <item>@font/yatra_one</item>
+    </array>
+</resources>

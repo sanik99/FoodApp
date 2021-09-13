@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="15dp"
+    tools:context=".FoodDetails">
+
+    <ImageView
+        android:id="@+id/back_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/back_btn"
+        android:layout_margin="5dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/fav_btn"
+        android:layout_margin="5dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/viewpager2"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_marginTop="40dp"
+        android:clipToPadding="true"
+        android:overScrollMode="never"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+
+<me.relex.circleindicator.CircleIndicator
+    android:id="@+id/circleIndicator"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="10dp"
+    app:ci_width="8dp"
+    app:ci_height="8dp"
+    app:ci_drawable="@color/orange"
+    app:ci_drawable_unselected="@color/grey"
+    android:layout_marginBottom="10dp"
+    app:layout_constraintTop_toBottomOf="@id/viewpager2"
+    app:layout_constraintStart_toStartOf="@+id/viewpager2"
+    app:layout_constraintEnd_toEndOf="@+id/viewpager2"/>
+
+
+    <TextView
+        android:id="@+id/food_nameBox"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:text="Veggie tomato mix"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:gravity="center"
+        android:layout_marginTop="20dp"
+        app:layout_constraintTop_toBottomOf="@+id/circleIndicator"
+        app:layout_constraintStart_toStartOf="@+id/viewpager2"
+        app:layout_constraintEnd_toEndOf="@+id/viewpager2"/>
+
+    <TextView
+        android:id="@+id/food_priceBox"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:text="Rs. 1000"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="#FF5722"
+        android:gravity="center"
+        android:layout_marginTop="10dp"
+        app:layout_constraintTop_toBottomOf="@+id/food_nameBox"
+        app:layout_constraintStart_toStartOf="@+id/food_nameBox"
+        app:layout_constraintEnd_toEndOf="@+id/food_nameBox"/>
+
+    <TextView
+        android:id="@+id/deliveryinfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Delivery info"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="35dp"
+        app:layout_constraintTop_toBottomOf="@+id/food_priceBox"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <TextView
+        android:id="@+id/del_des"
+        android:layout_width="320dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="We deliver the food within one hour
+right after the order is done. As a pioneer food delivery service
+provider, we are making life easier through online ordering."
+        app:layout_constraintTop_toBottomOf="@+id/deliveryinfo"
+        app:layout_constraintStart_toStartOf="@+id/deliveryinfo"/>
+
+    <TextView
+        android:id="@+id/returnPolicy"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Return Policy"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        android:layout_marginTop="30dp"
+        app:layout_constraintTop_toBottomOf="@+id/del_des"
+        app:layout_constraintStart_toStartOf="@+id/del_des"/>
+
+    <TextView
+        android:id="@+id/returnPolicy_des"
+        android:layout_width="320dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="All our foods are double checked before leaving
+our stores so by any case you found a broken food please contact our
+hotline immediatley."
+        app:layout_constraintTop_toBottomOf="@+id/returnPolicy"
+        app:layout_constraintStart_toStartOf="@+id/returnPolicy"/>
+
+    <Button
+        android:id="@+id/addToCart_btn"
+        android:layout_width="300dp"
+        android:layout_height="53dp"
+        android:background="@drawable/button_style"
+        android:text="Add to cart"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:layout_marginTop="35dp"
+        app:layout_constraintTop_toBottomOf="@+id/returnPolicy_des"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
